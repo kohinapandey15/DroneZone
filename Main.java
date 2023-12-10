@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     static int[][] grid;
 
-    //bfs
+    
     static void findTarget(int targetX, int targetY, int drone){
-        // directions
+       
         int []dx= {1,-1,0,0};
         int []dy= {0,0,1,-1};
 
@@ -17,7 +17,7 @@ public class Main {
         Queue<int[]> queue= new LinkedList<>();
 
 
-        //add drone in queue
+        
         for(int i=0; i<grid.length;i++){
             for(int j=0;j<grid[0].length;j++){
                 if(grid[i][j]==drone){
@@ -41,7 +41,7 @@ public class Main {
                         return;
                     }
 
-                    //check neighbours
+                    
 
                     for (int dir = 0; dir < 4; dir++) {
                         int newX = x + dx[dir];
@@ -94,7 +94,7 @@ public class Main {
             findTarget(targetX,targetY,i);
         }
     }
-    //output
+//       input
 //            11
 //            14
 //            1
